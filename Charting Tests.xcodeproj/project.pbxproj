@@ -7,15 +7,86 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880FFB3323E758F800C5515E /* ScatterPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB2823E758F700C5515E /* ScatterPlot.swift */; };
+		880FFB3423E758F800C5515E /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB2923E758F700C5515E /* Point.swift */; };
+		880FFB3623E758F800C5515E /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB2B23E758F700C5515E /* Axis.swift */; };
+		880FFB3723E758F800C5515E /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB2C23E758F700C5515E /* Chart.swift */; };
+		880FFB3823E758F800C5515E /* Base2DPlots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB2D23E758F700C5515E /* Base2DPlots.swift */; };
+		880FFB3923E758F800C5515E /* PiePlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB2E23E758F700C5515E /* PiePlot.swift */; };
+		880FFB3A23E758F800C5515E /* LinePlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB2F23E758F700C5515E /* LinePlot.swift */; };
+		880FFB3B23E758F800C5515E /* BarPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB3023E758F700C5515E /* BarPlot.swift */; };
+		880FFB3C23E758F800C5515E /* Paint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB3123E758F700C5515E /* Paint.swift */; };
+		880FFB3D23E758F800C5515E /* BasePlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB3223E758F800C5515E /* BasePlot.swift */; };
+		880FFB4323E75A4E00C5515E /* BaseTextPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB4223E75A4E00C5515E /* BaseTextPlot.swift */; };
+		880FFB4D23E8854400C5515E /* Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB4C23E8854400C5515E /* Observables.swift */; };
+		880FFB5323E88C8300C5515E /* libCharting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 880FFB2023E758E400C5515E /* libCharting.a */; };
+		880FFB5423E88C8300C5515E /* libObservables.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 880FFB4A23E8854400C5515E /* libObservables.a */; };
+		880FFB5623E8E56700C5515E /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB5523E8E56700C5515E /* Requests.swift */; };
 		8835B09923E757E400A8C55F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8835B09823E757E400A8C55F /* AppDelegate.swift */; };
 		8835B09B23E757E400A8C55F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8835B09A23E757E400A8C55F /* SceneDelegate.swift */; };
 		8835B09D23E757E400A8C55F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8835B09C23E757E400A8C55F /* ViewController.swift */; };
 		8835B0A023E757E400A8C55F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8835B09E23E757E400A8C55F /* Main.storyboard */; };
 		8835B0A223E757E700A8C55F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8835B0A123E757E700A8C55F /* Assets.xcassets */; };
 		8835B0A523E757E700A8C55F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8835B0A323E757E700A8C55F /* LaunchScreen.storyboard */; };
+		DAF96813EACA2792C624C665 /* Pods_Charting_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 419720687FF0BCC51B304651 /* Pods_Charting_Tests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		880FFB4423E75B7300C5515E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8835B08D23E757E300A8C55F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 880FFB1F23E758E400C5515E;
+			remoteInfo = Charting;
+		};
+		880FFB5123E8884500C5515E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8835B08D23E757E300A8C55F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 880FFB4923E8854400C5515E;
+			remoteInfo = Observables;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		880FFB1E23E758E400C5515E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		880FFB4823E8854400C5515E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		419720687FF0BCC51B304651 /* Pods_Charting_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Charting_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		880FFB2023E758E400C5515E /* libCharting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCharting.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		880FFB2723E758F600C5515E /* Charting-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Charting-Bridging-Header.h"; sourceTree = "<group>"; };
+		880FFB2823E758F700C5515E /* ScatterPlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterPlot.swift; sourceTree = "<group>"; };
+		880FFB2923E758F700C5515E /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		880FFB2B23E758F700C5515E /* Axis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
+		880FFB2C23E758F700C5515E /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		880FFB2D23E758F700C5515E /* Base2DPlots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base2DPlots.swift; sourceTree = "<group>"; };
+		880FFB2E23E758F700C5515E /* PiePlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiePlot.swift; sourceTree = "<group>"; };
+		880FFB2F23E758F700C5515E /* LinePlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinePlot.swift; sourceTree = "<group>"; };
+		880FFB3023E758F700C5515E /* BarPlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarPlot.swift; sourceTree = "<group>"; };
+		880FFB3123E758F700C5515E /* Paint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paint.swift; sourceTree = "<group>"; };
+		880FFB3223E758F800C5515E /* BasePlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePlot.swift; sourceTree = "<group>"; };
+		880FFB4223E75A4E00C5515E /* BaseTextPlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextPlot.swift; sourceTree = "<group>"; };
+		880FFB4A23E8854400C5515E /* libObservables.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObservables.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		880FFB4C23E8854400C5515E /* Observables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observables.swift; sourceTree = "<group>"; };
+		880FFB5523E8E56700C5515E /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		8835B09523E757E400A8C55F /* Charting Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Charting Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8835B09823E757E400A8C55F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8835B09A23E757E400A8C55F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,24 +95,83 @@
 		8835B0A123E757E700A8C55F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8835B0A423E757E700A8C55F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8835B0A623E757E700A8C55F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3EAA1DB4DCB819C9FC10960 /* Pods-Charting Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charting Tests.debug.xcconfig"; path = "Target Support Files/Pods-Charting Tests/Pods-Charting Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F3F414B5598CD44D2D595BBF /* Pods-Charting Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charting Tests.release.xcconfig"; path = "Target Support Files/Pods-Charting Tests/Pods-Charting Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8835B09223E757E300A8C55F /* Frameworks */ = {
+		880FFB1D23E758E400C5515E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		880FFB4723E8854400C5515E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8835B09223E757E300A8C55F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				880FFB5323E88C8300C5515E /* libCharting.a in Frameworks */,
+				880FFB5423E88C8300C5515E /* libObservables.a in Frameworks */,
+				DAF96813EACA2792C624C665 /* Pods_Charting_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		372369BEF5BF608CE075994F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3EAA1DB4DCB819C9FC10960 /* Pods-Charting Tests.debug.xcconfig */,
+				F3F414B5598CD44D2D595BBF /* Pods-Charting Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		880FFB2123E758E400C5515E /* Charting */ = {
+			isa = PBXGroup;
+			children = (
+				880FFB2B23E758F700C5515E /* Axis.swift */,
+				880FFB3023E758F700C5515E /* BarPlot.swift */,
+				880FFB2D23E758F700C5515E /* Base2DPlots.swift */,
+				880FFB3223E758F800C5515E /* BasePlot.swift */,
+				880FFB4223E75A4E00C5515E /* BaseTextPlot.swift */,
+				880FFB2C23E758F700C5515E /* Chart.swift */,
+				880FFB2F23E758F700C5515E /* LinePlot.swift */,
+				880FFB3123E758F700C5515E /* Paint.swift */,
+				880FFB2E23E758F700C5515E /* PiePlot.swift */,
+				880FFB2923E758F700C5515E /* Point.swift */,
+				880FFB2823E758F700C5515E /* ScatterPlot.swift */,
+				880FFB2723E758F600C5515E /* Charting-Bridging-Header.h */,
+			);
+			path = Charting;
+			sourceTree = "<group>";
+		};
+		880FFB4B23E8854400C5515E /* Observables */ = {
+			isa = PBXGroup;
+			children = (
+				880FFB4C23E8854400C5515E /* Observables.swift */,
+			);
+			path = Observables;
+			sourceTree = "<group>";
+		};
 		8835B08C23E757E300A8C55F = {
 			isa = PBXGroup;
 			children = (
 				8835B09723E757E400A8C55F /* Charting Tests */,
+				880FFB2123E758E400C5515E /* Charting */,
+				880FFB4B23E8854400C5515E /* Observables */,
 				8835B09623E757E400A8C55F /* Products */,
+				372369BEF5BF608CE075994F /* Pods */,
+				A9A97376528B113D2C041C94 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				8835B09523E757E400A8C55F /* Charting Tests.app */,
+				880FFB2023E758E400C5515E /* libCharting.a */,
+				880FFB4A23E8854400C5515E /* libObservables.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +188,7 @@
 		8835B09723E757E400A8C55F /* Charting Tests */ = {
 			isa = PBXGroup;
 			children = (
+				880FFB5523E8E56700C5515E /* Requests.swift */,
 				8835B09823E757E400A8C55F /* AppDelegate.swift */,
 				8835B09A23E757E400A8C55F /* SceneDelegate.swift */,
 				8835B09C23E757E400A8C55F /* ViewController.swift */,
@@ -67,13 +200,56 @@
 			path = "Charting Tests";
 			sourceTree = "<group>";
 		};
+		A9A97376528B113D2C041C94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				419720687FF0BCC51B304651 /* Pods_Charting_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		880FFB1F23E758E400C5515E /* Charting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 880FFB2623E758E400C5515E /* Build configuration list for PBXNativeTarget "Charting" */;
+			buildPhases = (
+				880FFB1C23E758E400C5515E /* Sources */,
+				880FFB1D23E758E400C5515E /* Frameworks */,
+				880FFB1E23E758E400C5515E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Charting;
+			productName = Charting;
+			productReference = 880FFB2023E758E400C5515E /* libCharting.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		880FFB4923E8854400C5515E /* Observables */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 880FFB4E23E8854400C5515E /* Build configuration list for PBXNativeTarget "Observables" */;
+			buildPhases = (
+				880FFB4623E8854400C5515E /* Sources */,
+				880FFB4723E8854400C5515E /* Frameworks */,
+				880FFB4823E8854400C5515E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Observables;
+			productName = Observables;
+			productReference = 880FFB4A23E8854400C5515E /* libObservables.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		8835B09423E757E300A8C55F /* Charting Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8835B0A923E757E700A8C55F /* Build configuration list for PBXNativeTarget "Charting Tests" */;
 			buildPhases = (
+				616D5122C73E265AA3F17449 /* [CP] Check Pods Manifest.lock */,
 				8835B09123E757E300A8C55F /* Sources */,
 				8835B09223E757E300A8C55F /* Frameworks */,
 				8835B09323E757E300A8C55F /* Resources */,
@@ -81,6 +257,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				880FFB5223E8884500C5515E /* PBXTargetDependency */,
+				880FFB4523E75B7300C5515E /* PBXTargetDependency */,
 			);
 			name = "Charting Tests";
 			productName = "Charting Tests";
@@ -97,6 +275,13 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Renato Ribeiro";
 				TargetAttributes = {
+					880FFB1F23E758E400C5515E = {
+						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
+					};
+					880FFB4923E8854400C5515E = {
+						CreatedOnToolsVersion = 11.3;
+					};
 					8835B09423E757E300A8C55F = {
 						CreatedOnToolsVersion = 11.3;
 					};
@@ -116,6 +301,8 @@
 			projectRoot = "";
 			targets = (
 				8835B09423E757E300A8C55F /* Charting Tests */,
+				880FFB1F23E758E400C5515E /* Charting */,
+				880FFB4923E8854400C5515E /* Observables */,
 			);
 		};
 /* End PBXProject section */
@@ -133,18 +320,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		616D5122C73E265AA3F17449 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Charting Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		880FFB1C23E758E400C5515E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				880FFB3A23E758F800C5515E /* LinePlot.swift in Sources */,
+				880FFB3723E758F800C5515E /* Chart.swift in Sources */,
+				880FFB4323E75A4E00C5515E /* BaseTextPlot.swift in Sources */,
+				880FFB3823E758F800C5515E /* Base2DPlots.swift in Sources */,
+				880FFB3923E758F800C5515E /* PiePlot.swift in Sources */,
+				880FFB3423E758F800C5515E /* Point.swift in Sources */,
+				880FFB3C23E758F800C5515E /* Paint.swift in Sources */,
+				880FFB3623E758F800C5515E /* Axis.swift in Sources */,
+				880FFB3323E758F800C5515E /* ScatterPlot.swift in Sources */,
+				880FFB3B23E758F800C5515E /* BarPlot.swift in Sources */,
+				880FFB3D23E758F800C5515E /* BasePlot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		880FFB4623E8854400C5515E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				880FFB4D23E8854400C5515E /* Observables.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8835B09123E757E300A8C55F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8835B09D23E757E400A8C55F /* ViewController.swift in Sources */,
+				880FFB5623E8E56700C5515E /* Requests.swift in Sources */,
 				8835B09923E757E400A8C55F /* AppDelegate.swift in Sources */,
 				8835B09B23E757E400A8C55F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		880FFB4523E75B7300C5515E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 880FFB1F23E758E400C5515E /* Charting */;
+			targetProxy = 880FFB4423E75B7300C5515E /* PBXContainerItemProxy */;
+		};
+		880FFB5223E8884500C5515E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 880FFB4923E8854400C5515E /* Observables */;
+			targetProxy = 880FFB5123E8884500C5515E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8835B09E23E757E400A8C55F /* Main.storyboard */ = {
@@ -166,6 +418,73 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		880FFB2423E758E400C5515E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SQJJLV44P2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Charting/Charting-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		880FFB2523E758E400C5515E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SQJJLV44P2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Charting/Charting-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		880FFB4F23E8854400C5515E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SQJJLV44P2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		880FFB5023E8854400C5515E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SQJJLV44P2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		8835B0A723E757E700A8C55F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -282,6 +601,7 @@
 		};
 		8835B0AA23E757E700A8C55F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3EAA1DB4DCB819C9FC10960 /* Pods-Charting Tests.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +620,7 @@
 		};
 		8835B0AB23E757E700A8C55F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3F414B5598CD44D2D595BBF /* Pods-Charting Tests.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +640,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		880FFB2623E758E400C5515E /* Build configuration list for PBXNativeTarget "Charting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				880FFB2423E758E400C5515E /* Debug */,
+				880FFB2523E758E400C5515E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		880FFB4E23E8854400C5515E /* Build configuration list for PBXNativeTarget "Observables" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				880FFB4F23E8854400C5515E /* Debug */,
+				880FFB5023E8854400C5515E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8835B09023E757E300A8C55F /* Build configuration list for PBXProject "Charting Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
