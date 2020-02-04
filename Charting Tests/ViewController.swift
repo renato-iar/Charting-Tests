@@ -178,10 +178,10 @@ class ViewController: UIViewController {
 
     private let line_plot: LinePlot                         = {
         let plot                        = LinePlot()
-        plot.closed                     = true
+        plot.closed                     = false
         plot.smooth                     = true
         plot.paint                      = [
-            FillPaint(color: UIColor(red: 0.85, green: 0.125, blue: 0.25, alpha: 1.0))
+            StrokePaint(name: nil, gradient: nil, lineWidth: 2.0, lineCap: CGLineCap.round, lineJoin: CGLineJoin.round, strokeColor: UIColor(red: 0.85, green: 0.125, blue: 0.25, alpha: 1.0), stipplePattern: [], stipplePatternPhase: 0)
         ]
 
         return plot
@@ -191,9 +191,10 @@ class ViewController: UIViewController {
         plot.bubblePropertiesCallback   = {
             arg in
 
-            let rad     = CGFloat.random(in: 0.1 ... 0.5)
+            let rad     = CGFloat.random(in: 10.0 ... 15.0)
             let fill    = FillPaint(color: UIColor(red: 0.85, green: 0.125, blue: 0.25, alpha: 1.0))
             let stroke  = StrokePaint(name: nil, gradient: nil, lineWidth: 2.0, lineCap: CGLineCap.round, lineJoin: CGLineJoin.round, strokeColor: UIColor.lightGray, stipplePattern: [], stipplePatternPhase: 0)
+
             return BubblePlot.BubbleProperties(radius: rad, paint: [fill, stroke])
         }
 
@@ -216,7 +217,7 @@ class ViewController: UIViewController {
         self.line_scatter_chartView?.chartLayer.xAxis.origin    = 0
         self.line_scatter_chartView?.chartLayer.xAxis.length    = CGFloat(change.to.count)
         self.line_scatter_chartView?.chartLayer.yAxis.origin    = 0
-        self.line_scatter_chartView?.chartLayer.xAxis.length    = change.to.reduce(0) { r, p in Swift.max(r, p.y) }
+        self.line_scatter_chartView?.chartLayer.yAxis.length    = change.to.reduce(0) { r, p in Swift.max(r, p.y) }
 
         self.line_plot.points       = change.to
         self.scatter_plot.segments  = change.to

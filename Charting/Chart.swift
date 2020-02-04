@@ -176,4 +176,10 @@ open class ChartView: UIView {
         return ChartLayer.classForCoder()
     }
 
+    open override func awakeFromNib() -> () {
+        super.awakeFromNib()
+
+        self.layer.contentsScale    = UIScreen.main.scale
+    }
+
 }
