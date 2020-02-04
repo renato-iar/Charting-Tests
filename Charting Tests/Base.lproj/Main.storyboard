@@ -23,22 +23,46 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOe-5S-0Z9" customClass="ChartView" customModule="Charting">
                                                 <rect key="frame" x="20" y="10" width="374" height="210.5"/>
+                                                <subviews>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="YF9-qm-fFI">
+                                                        <rect key="frame" x="168.5" y="86.5" width="37" height="37"/>
+                                                        <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </activityIndicatorView>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="YF9-qm-fFI" firstAttribute="centerX" secondItem="IOe-5S-0Z9" secondAttribute="centerX" id="59E-T4-lc3"/>
+                                                    <constraint firstItem="YF9-qm-fFI" firstAttribute="centerY" secondItem="IOe-5S-0Z9" secondAttribute="centerY" id="6UD-9s-5ei"/>
                                                     <constraint firstAttribute="width" secondItem="IOe-5S-0Z9" secondAttribute="height" multiplier="16:9" id="f3r-nD-jbi"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="179-BT-sPU" customClass="ChartView" customModule="Charting">
                                                 <rect key="frame" x="20" y="240.5" width="374" height="374"/>
+                                                <subviews>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="tYI-7c-0li">
+                                                        <rect key="frame" x="168.5" y="168.5" width="37" height="37"/>
+                                                        <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </activityIndicatorView>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="tYI-7c-0li" firstAttribute="centerY" secondItem="179-BT-sPU" secondAttribute="centerY" id="HoY-zp-6P6"/>
+                                                    <constraint firstItem="tYI-7c-0li" firstAttribute="centerX" secondItem="179-BT-sPU" secondAttribute="centerX" id="sAQ-pu-3Yz"/>
                                                     <constraint firstAttribute="width" secondItem="179-BT-sPU" secondAttribute="height" multiplier="1:1" id="xv7-HT-401"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ba5-RZ-mLL" customClass="ChartView" customModule="Charting">
                                                 <rect key="frame" x="20" y="634.5" width="374" height="280.5"/>
+                                                <subviews>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="MaS-aH-Wvn">
+                                                        <rect key="frame" x="168.5" y="121.5" width="37" height="37"/>
+                                                        <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </activityIndicatorView>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="MaS-aH-Wvn" firstAttribute="centerX" secondItem="ba5-RZ-mLL" secondAttribute="centerX" id="1U8-Vu-YQw"/>
+                                                    <constraint firstItem="MaS-aH-Wvn" firstAttribute="centerY" secondItem="ba5-RZ-mLL" secondAttribute="centerY" id="Lws-T7-t2W"/>
                                                     <constraint firstAttribute="width" secondItem="ba5-RZ-mLL" secondAttribute="height" multiplier="4:3" id="wM6-qG-XzD"/>
                                                 </constraints>
                                             </view>
@@ -76,8 +100,11 @@
                     </view>
                     <connections>
                         <outlet property="bar_chartView" destination="IOe-5S-0Z9" id="u66-u2-qr6"/>
+                        <outlet property="bar_chartView_activityIndicator" destination="YF9-qm-fFI" id="WAE-Mh-gba"/>
                         <outlet property="line_scatter_chartView" destination="ba5-RZ-mLL" id="REe-bT-fZM"/>
+                        <outlet property="line_scatter_chartView_activityIndicator" destination="MaS-aH-Wvn" id="fhc-8n-NnP"/>
                         <outlet property="pie_chartView" destination="179-BT-sPU" id="fBw-yj-3Fe"/>
+                        <outlet property="pie_chartView_activityIndicator" destination="tYI-7c-0li" id="dHa-v7-hnd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
