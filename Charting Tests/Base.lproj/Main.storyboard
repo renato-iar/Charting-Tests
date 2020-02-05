@@ -16,55 +16,136 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbo-XD-T2z">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="832"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Spw-a6-RTc">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="935"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Spw-a6-RTc">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1022.5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOe-5S-0Z9" customClass="ChartView" customModule="Charting">
-                                                <rect key="frame" x="20" y="10" width="374" height="210.5"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gu2-zI-4lZ">
+                                                <rect key="frame" x="20" y="10" width="374" height="238"/>
                                                 <subviews>
-                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="YF9-qm-fFI">
-                                                        <rect key="frame" x="168.5" y="86.5" width="37" height="37"/>
-                                                        <color key="color" cocoaTouchSystemColor="darkTextColor"/>
-                                                    </activityIndicatorView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ksH-Nj-5S8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="238"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOe-5S-0Z9" customClass="ChartView" customModule="Charting">
+                                                                <rect key="frame" x="20" y="20" width="334" height="188"/>
+                                                                <subviews>
+                                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="YF9-qm-fFI">
+                                                                        <rect key="frame" x="148.5" y="75.5" width="37" height="37"/>
+                                                                        <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    </activityIndicatorView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="YF9-qm-fFI" firstAttribute="centerX" secondItem="IOe-5S-0Z9" secondAttribute="centerX" id="59E-T4-lc3"/>
+                                                                    <constraint firstItem="YF9-qm-fFI" firstAttribute="centerY" secondItem="IOe-5S-0Z9" secondAttribute="centerY" id="6UD-9s-5ei"/>
+                                                                    <constraint firstAttribute="width" secondItem="IOe-5S-0Z9" secondAttribute="height" multiplier="16:9" id="f3r-nD-jbi"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4Ki-kL-vXs">
+                                                                <rect key="frame" x="20" y="218" width="334" height="0.0"/>
+                                                                <subviews>
+                                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1X-Hg-T5e">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="0.0"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" id="5QV-y9-Ilk"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
+                                                    </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="YF9-qm-fFI" firstAttribute="centerX" secondItem="IOe-5S-0Z9" secondAttribute="centerX" id="59E-T4-lc3"/>
-                                                    <constraint firstItem="YF9-qm-fFI" firstAttribute="centerY" secondItem="IOe-5S-0Z9" secondAttribute="centerY" id="6UD-9s-5ei"/>
-                                                    <constraint firstAttribute="width" secondItem="IOe-5S-0Z9" secondAttribute="height" multiplier="16:9" id="f3r-nD-jbi"/>
+                                                    <constraint firstItem="ksH-Nj-5S8" firstAttribute="leading" secondItem="gu2-zI-4lZ" secondAttribute="leading" id="N4F-nc-QI7"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ksH-Nj-5S8" secondAttribute="bottom" id="YCd-HM-Rko"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ksH-Nj-5S8" secondAttribute="trailing" id="jJM-Wz-enK"/>
+                                                    <constraint firstItem="ksH-Nj-5S8" firstAttribute="top" secondItem="gu2-zI-4lZ" secondAttribute="top" id="s9e-to-bZh"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="4" height="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.34999999999999998"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="179-BT-sPU" customClass="ChartView" customModule="Charting">
-                                                <rect key="frame" x="20" y="240.5" width="374" height="374"/>
+                                                <rect key="frame" x="20" y="298" width="374" height="374"/>
                                                 <subviews>
                                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="tYI-7c-0li">
                                                         <rect key="frame" x="168.5" y="168.5" width="37" height="37"/>
                                                         <color key="color" cocoaTouchSystemColor="darkTextColor"/>
                                                     </activityIndicatorView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="tYI-7c-0li" firstAttribute="centerY" secondItem="179-BT-sPU" secondAttribute="centerY" id="HoY-zp-6P6"/>
                                                     <constraint firstItem="tYI-7c-0li" firstAttribute="centerX" secondItem="179-BT-sPU" secondAttribute="centerX" id="sAQ-pu-3Yz"/>
                                                     <constraint firstAttribute="width" secondItem="179-BT-sPU" secondAttribute="height" multiplier="1:1" id="xv7-HT-401"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="4" height="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.34999999999999998"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ba5-RZ-mLL" customClass="ChartView" customModule="Charting">
-                                                <rect key="frame" x="20" y="634.5" width="374" height="280.5"/>
+                                                <rect key="frame" x="20" y="722" width="374" height="280.5"/>
                                                 <subviews>
                                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="MaS-aH-Wvn">
                                                         <rect key="frame" x="168.5" y="121.5" width="37" height="37"/>
                                                         <color key="color" cocoaTouchSystemColor="darkTextColor"/>
                                                     </activityIndicatorView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="MaS-aH-Wvn" firstAttribute="centerX" secondItem="ba5-RZ-mLL" secondAttribute="centerX" id="1U8-Vu-YQw"/>
                                                     <constraint firstItem="MaS-aH-Wvn" firstAttribute="centerY" secondItem="ba5-RZ-mLL" secondAttribute="centerY" id="Lws-T7-t2W"/>
                                                     <constraint firstAttribute="width" secondItem="ba5-RZ-mLL" secondAttribute="height" multiplier="4:3" id="wM6-qG-XzD"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="4" height="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.34999999999999998"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="10" left="20" bottom="20" right="20"/>
@@ -78,15 +159,20 @@
                                     <constraint firstItem="Spw-a6-RTc" firstAttribute="top" secondItem="Gbo-XD-T2z" secondAttribute="top" id="FEp-aa-Vvd"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="432-oT-1qT">
-                                <rect key="frame" x="0.0" y="832" width="414" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="432-oT-1qT">
+                                <rect key="frame" x="0.0" y="800" width="414" height="62"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
+                                <state key="normal" title="RELOAD">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onReloadChartsAction" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="8f3-Ke-F7L"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Gbo-XD-T2z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KEh-Bg-rnH"/>
                             <constraint firstAttribute="trailing" secondItem="Gbo-XD-T2z" secondAttribute="trailing" id="Qe5-o1-3Sf"/>
@@ -101,6 +187,8 @@
                     <connections>
                         <outlet property="bar_chartView" destination="IOe-5S-0Z9" id="u66-u2-qr6"/>
                         <outlet property="bar_chartView_activityIndicator" destination="YF9-qm-fFI" id="WAE-Mh-gba"/>
+                        <outlet property="bar_chartView_container_view" destination="gu2-zI-4lZ" id="Xz3-Ax-hrd"/>
+                        <outlet property="bar_chartView_label_stackView" destination="4Ki-kL-vXs" id="Aim-pX-NGs"/>
                         <outlet property="line_scatter_chartView" destination="ba5-RZ-mLL" id="REe-bT-fZM"/>
                         <outlet property="line_scatter_chartView_activityIndicator" destination="MaS-aH-Wvn" id="fhc-8n-NnP"/>
                         <outlet property="pie_chartView" destination="179-BT-sPU" id="fBw-yj-3Fe"/>

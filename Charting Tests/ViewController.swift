@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Utils
 import Combine
 import Charting
 import Observables
@@ -113,12 +114,12 @@ class ViewControllerModel: NSObject, ObservableObject {
 
 class ViewController: UIViewController {
 
-    private var is_reloading_bar_data_observer_key: ObserverKey?    = nil {
+    private var is_reloading_bar_data_observer_key: ObserverKey?            = nil {
         willSet {
             self.model.isReloadingBarData.unregister(willChangeObserverWith: self.is_reloading_bar_data_observer_key)
         }
     }
-    private var is_reloading_pie_data_observer_key: ObserverKey?    = nil {
+    private var is_reloading_pie_data_observer_key: ObserverKey?            = nil {
         willSet {
             self.model.isReloadingPieData.unregister(didChangeObserverWith: self.is_reloading_pie_data_observer_key)
         }
@@ -129,24 +130,36 @@ class ViewController: UIViewController {
         }
     }
 
-    private var bar_data_observer_key: ObserverKey?                 = nil {
+    private var bar_data_observer_key: ObserverKey?                         = nil {
         willSet {
             self.model.barData.unregister(didChangeObserverWith: self.bar_data_observer_key)
         }
     }
-    private var pie_data_observer_key: ObserverKey?                 = nil {
+    private var bar_data_labels: [ColorLabelView]                           = [] {
+        didSet {
+            if let sv = self.bar_chartView_label_stackView {
+                for subview in sv.arrangedSubviews {
+                    sv.removeArrangedSubview(subview)
+                }
+                for subview in self.bar_data_labels {
+                    sv.addArrangedSubview(subview)
+                }
+            }
+        }
+    }
+    private var pie_data_observer_key: ObserverKey?                         = nil {
         willSet {
             self.model.pieData.unregister(didChangeObserverWith: self.pie_data_observer_key)
         }
     }
-    private var line_scatter_data_observer_key: ObserverKey?        = nil {
+    private var line_scatter_data_observer_key: ObserverKey?                = nil {
         willSet {
             self.model.lineScatterData.unregister(didChangeObserverWith: self.line_scatter_data_observer_key)
         }
     }
 
-    private let model                                               = ViewControllerModel()
-    private let bar_plot: BarPlot<Int>                              = {
+    private let model                                                       = ViewControllerModel()
+    private let bar_plot: BarPlot<Int>                                      = {
         let plot                        = BarPlot<Int>()
         plot.barSegmentPaintCallback    = {
             arg in
@@ -160,7 +173,7 @@ class ViewController: UIViewController {
 
         return plot
     }()
-    private let pie_plot: PiePlot<Int>                              = {
+    private let pie_plot: PiePlot<Int>                                      = {
         let plot                        = PiePlot<Int>()
         plot.pieSlicePropertiesCallback = {
             arg in
@@ -208,7 +221,26 @@ class ViewController: UIViewController {
         self.bar_chartView?.chartLayer.yAxis.length = CGFloat(change.to.reduce(0, Swift.max))
 
         let segments: [Int?]    = change.to.map { $0 }
+        let n                   = change.to.count
         self.bar_plot.segments  = segments
+
+        var labels                                  = [ColorLabelView]()
+        for i in 0 ..< n {
+            let segment                             = change.to[i]
+            let label                               = ColorLabelView()
+            let gray                                = CGFloat(i) / CGFloat(n)
+            let color                               = UIColor(red: gray, green: gray, blue: gray, alpha: 1.0)
+            label.backgroundColor                   = UIColor.clear
+            label.labelText                         = "# \(segment)"
+            label.labelTextColor                    = color
+            label.markerColor                       = color
+            var borders                             = label.markerBorderProxy
+            borders.width                           = 1
+            borders.color                           = UIColor.lightGray
+            labels.append(label)
+        }
+
+        self.bar_data_labels                        = labels
     }
     private func pie_data_did_change(_ change: Observable<[Int]>.ObserverCallbackArgument) -> () {
         self.pie_plot.segments  = change.to
@@ -248,10 +280,16 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBOutlet public final weak var bar_chartView_container_view: UIView!
     @IBOutlet public final weak var bar_chartView: ChartView!
     @IBOutlet public final weak var bar_chartView_activityIndicator: UIActivityIndicatorView!
+    @IBOutlet public final weak var bar_chartView_label_stackView: UIStackView!
+
+    @IBOutlet public final weak var pie_chartView_container_view: UIView!
     @IBOutlet public final weak var pie_chartView: ChartView!
     @IBOutlet public final weak var pie_chartView_activityIndicator: UIActivityIndicatorView!
+
+    @IBOutlet public final weak var line_scatter_chartView_container_view: UIView!
     @IBOutlet public final weak var line_scatter_chartView: ChartView!
     @IBOutlet public final weak var line_scatter_chartView_activityIndicator: UIActivityIndicatorView!
 
@@ -263,20 +301,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() -> () {
         super.viewDidLoad()
 
-        self.bar_data_observer_key  = self.model.barData.register(didChange: {
+        self.bar_data_observer_key                      = self.model.barData.register(didChange: {
             [weak self] change in
             self?.bar_data_did_change(change)
         })
-        self.pie_data_observer_key  = self.model.pieData.register(didChange: {
+        self.pie_data_observer_key                          = self.model.pieData.register(didChange: {
             [weak self] change in
             self?.pie_data_did_change(change)
         })
 
-        self.is_reloading_bar_data_observer_key = self.model.isReloadingBarData.register(didChange: {
+        self.is_reloading_bar_data_observer_key             = self.model.isReloadingBarData.register(didChange: {
             [weak self] change in
             self?.is_reloading_bar_data_changed(change)
         })
-        self.is_reloading_pie_data_observer_key = self.model.isReloadingPieData.register(didChange: {
+        self.is_reloading_pie_data_observer_key             = self.model.isReloadingPieData.register(didChange: {
             [weak self] change in
             self?.is_reloading_pie_data_changed(change)
         })
@@ -290,9 +328,12 @@ class ViewController: UIViewController {
             self?.line_scatter_data_did_change(change)
         })
 
-        self.bar_chartView?.chartLayer.plots            = [self.bar_plot]
-        self.pie_chartView?.chartLayer.plots            = [self.pie_plot]
-        self.line_scatter_chartView?.chartLayer.plots   = [self.line_plot, self.scatter_plot]
+        self.bar_chartView_container_view?.borderWidth          = 0
+        self.bar_chartView?.chartLayer.plots                    = [self.bar_plot]
+        self.pie_chartView_container_view?.borderWidth          = 0
+        self.pie_chartView?.chartLayer.plots                    = [self.pie_plot]
+        self.line_scatter_chartView_container_view?.borderWidth = 0
+        self.line_scatter_chartView?.chartLayer.plots           = [self.line_plot, self.scatter_plot]
     }
     override func viewDidAppear(_ animated: Bool) -> () {
         super.viewDidAppear(animated)

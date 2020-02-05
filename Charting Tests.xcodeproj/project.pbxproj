@@ -22,6 +22,12 @@
 		880FFB5323E88C8300C5515E /* libCharting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 880FFB2023E758E400C5515E /* libCharting.a */; };
 		880FFB5423E88C8300C5515E /* libObservables.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 880FFB4A23E8854400C5515E /* libObservables.a */; };
 		880FFB5623E8E56700C5515E /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB5523E8E56700C5515E /* Requests.swift */; };
+		880FFB5E23E9B80400C5515E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB5D23E9B80400C5515E /* Utils.swift */; };
+		880FFB6323E9B82700C5515E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB6223E9B82700C5515E /* UIViewExtensions.swift */; };
+		880FFB6523E9B96700C5515E /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB6423E9B96700C5515E /* OptionalExtensions.swift */; };
+		880FFB6823E9BDAE00C5515E /* libUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 880FFB5B23E9B80400C5515E /* libUtils.a */; };
+		880FFB6D23EB161500C5515E /* ColorLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB6C23EB161500C5515E /* ColorLabelView.swift */; };
+		880FFB6F23EB197400C5515E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FFB6E23EB197400C5515E /* Array.swift */; };
 		8835B09923E757E400A8C55F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8835B09823E757E400A8C55F /* AppDelegate.swift */; };
 		8835B09B23E757E400A8C55F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8835B09A23E757E400A8C55F /* SceneDelegate.swift */; };
 		8835B09D23E757E400A8C55F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8835B09C23E757E400A8C55F /* ViewController.swift */; };
@@ -46,6 +52,13 @@
 			remoteGlobalIDString = 880FFB4923E8854400C5515E;
 			remoteInfo = Observables;
 		};
+		880FFB6623E9BDA900C5515E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8835B08D23E757E300A8C55F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 880FFB5A23E9B80400C5515E;
+			remoteInfo = Utils;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +72,15 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		880FFB4823E8854400C5515E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		880FFB5923E9B80400C5515E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -87,6 +109,12 @@
 		880FFB4A23E8854400C5515E /* libObservables.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObservables.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		880FFB4C23E8854400C5515E /* Observables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observables.swift; sourceTree = "<group>"; };
 		880FFB5523E8E56700C5515E /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		880FFB5B23E9B80400C5515E /* libUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		880FFB5D23E9B80400C5515E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		880FFB6223E9B82700C5515E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		880FFB6423E9B96700C5515E /* OptionalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtensions.swift; sourceTree = "<group>"; };
+		880FFB6C23EB161500C5515E /* ColorLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLabelView.swift; sourceTree = "<group>"; };
+		880FFB6E23EB197400C5515E /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		8835B09523E757E400A8C55F /* Charting Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Charting Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8835B09823E757E400A8C55F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8835B09A23E757E400A8C55F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,10 +142,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		880FFB5823E9B80400C5515E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8835B09223E757E300A8C55F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880FFB6823E9BDAE00C5515E /* libUtils.a in Frameworks */,
 				880FFB5323E88C8300C5515E /* libCharting.a in Frameworks */,
 				880FFB5423E88C8300C5515E /* libObservables.a in Frameworks */,
 				DAF96813EACA2792C624C665 /* Pods_Charting_Tests.framework in Frameworks */,
@@ -163,12 +199,24 @@
 			path = Observables;
 			sourceTree = "<group>";
 		};
+		880FFB5C23E9B80400C5515E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				880FFB5D23E9B80400C5515E /* Utils.swift */,
+				880FFB6223E9B82700C5515E /* UIViewExtensions.swift */,
+				880FFB6423E9B96700C5515E /* OptionalExtensions.swift */,
+				880FFB6E23EB197400C5515E /* Array.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		8835B08C23E757E300A8C55F = {
 			isa = PBXGroup;
 			children = (
 				8835B09723E757E400A8C55F /* Charting Tests */,
 				880FFB2123E758E400C5515E /* Charting */,
 				880FFB4B23E8854400C5515E /* Observables */,
+				880FFB5C23E9B80400C5515E /* Utils */,
 				8835B09623E757E400A8C55F /* Products */,
 				372369BEF5BF608CE075994F /* Pods */,
 				A9A97376528B113D2C041C94 /* Frameworks */,
@@ -181,6 +229,7 @@
 				8835B09523E757E400A8C55F /* Charting Tests.app */,
 				880FFB2023E758E400C5515E /* libCharting.a */,
 				880FFB4A23E8854400C5515E /* libObservables.a */,
+				880FFB5B23E9B80400C5515E /* libUtils.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,6 +245,7 @@
 				8835B0A123E757E700A8C55F /* Assets.xcassets */,
 				8835B0A323E757E700A8C55F /* LaunchScreen.storyboard */,
 				8835B0A623E757E700A8C55F /* Info.plist */,
+				880FFB6C23EB161500C5515E /* ColorLabelView.swift */,
 			);
 			path = "Charting Tests";
 			sourceTree = "<group>";
@@ -245,6 +295,23 @@
 			productReference = 880FFB4A23E8854400C5515E /* libObservables.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		880FFB5A23E9B80400C5515E /* Utils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 880FFB5F23E9B80400C5515E /* Build configuration list for PBXNativeTarget "Utils" */;
+			buildPhases = (
+				880FFB5723E9B80400C5515E /* Sources */,
+				880FFB5823E9B80400C5515E /* Frameworks */,
+				880FFB5923E9B80400C5515E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Utils;
+			productName = Utils;
+			productReference = 880FFB5B23E9B80400C5515E /* libUtils.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		8835B09423E757E300A8C55F /* Charting Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8835B0A923E757E700A8C55F /* Build configuration list for PBXNativeTarget "Charting Tests" */;
@@ -257,6 +324,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				880FFB6723E9BDA900C5515E /* PBXTargetDependency */,
 				880FFB5223E8884500C5515E /* PBXTargetDependency */,
 				880FFB4523E75B7300C5515E /* PBXTargetDependency */,
 			);
@@ -282,6 +350,9 @@
 					880FFB4923E8854400C5515E = {
 						CreatedOnToolsVersion = 11.3;
 					};
+					880FFB5A23E9B80400C5515E = {
+						CreatedOnToolsVersion = 11.3;
+					};
 					8835B09423E757E300A8C55F = {
 						CreatedOnToolsVersion = 11.3;
 					};
@@ -303,6 +374,7 @@
 				8835B09423E757E300A8C55F /* Charting Tests */,
 				880FFB1F23E758E400C5515E /* Charting */,
 				880FFB4923E8854400C5515E /* Observables */,
+				880FFB5A23E9B80400C5515E /* Utils */,
 			);
 		};
 /* End PBXProject section */
@@ -372,6 +444,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		880FFB5723E9B80400C5515E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				880FFB6323E9B82700C5515E /* UIViewExtensions.swift in Sources */,
+				880FFB6F23EB197400C5515E /* Array.swift in Sources */,
+				880FFB6523E9B96700C5515E /* OptionalExtensions.swift in Sources */,
+				880FFB5E23E9B80400C5515E /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8835B09123E757E300A8C55F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +462,7 @@
 				8835B09D23E757E400A8C55F /* ViewController.swift in Sources */,
 				880FFB5623E8E56700C5515E /* Requests.swift in Sources */,
 				8835B09923E757E400A8C55F /* AppDelegate.swift in Sources */,
+				880FFB6D23EB161500C5515E /* ColorLabelView.swift in Sources */,
 				8835B09B23E757E400A8C55F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +479,11 @@
 			isa = PBXTargetDependency;
 			target = 880FFB4923E8854400C5515E /* Observables */;
 			targetProxy = 880FFB5123E8884500C5515E /* PBXContainerItemProxy */;
+		};
+		880FFB6723E9BDA900C5515E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 880FFB5A23E9B80400C5515E /* Utils */;
+			targetProxy = 880FFB6623E9BDA900C5515E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -473,6 +562,32 @@
 			name = Debug;
 		};
 		880FFB5023E8854400C5515E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SQJJLV44P2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		880FFB6023E9B80400C5515E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SQJJLV44P2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		880FFB6123E9B80400C5515E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -654,6 +769,15 @@
 			buildConfigurations = (
 				880FFB4F23E8854400C5515E /* Debug */,
 				880FFB5023E8854400C5515E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		880FFB5F23E9B80400C5515E /* Build configuration list for PBXNativeTarget "Utils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				880FFB6023E9B80400C5515E /* Debug */,
+				880FFB6123E9B80400C5515E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
